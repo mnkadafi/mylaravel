@@ -15,12 +15,14 @@ class UserTableSeeder extends Seeder
         		[
         			'name' => 'kadafi',
         			'email' => 'mnkadafi98@gmail.com',
-        			'password' => \Hash::make('kadafi')
+        			'password' => \Hash::make('kadafi'),
+                    'kota_id' => 1
         		],
         		[
         			'name' => 'rando',
         			'email' => 'rando98@gmail.com',
-        			'password' => \Hash::make('rando')
+        			'password' => \Hash::make('rando'),
+                    'kota_id' => 2
         		]
         	]);
     }

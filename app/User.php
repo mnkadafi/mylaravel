@@ -7,6 +7,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    protected $table = 'users';
+
     use Notifiable;
 
     /**
@@ -41,4 +43,14 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class);
     }
+
+    public function kota()
+    {
+        return $this->belongsTo('App\Kota', 'kota_id');
+    }
+
+    // public function kenda()
+    // {
+    //     return $this->hasMany(Kendaraan::class);
+    // }
 }

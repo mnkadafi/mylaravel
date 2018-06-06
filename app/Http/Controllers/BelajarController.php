@@ -67,5 +67,14 @@ class BelajarController extends Controller
         $users = \App\User::where('name', $name)->first();
 
         return view('many_to_many', compact('users','title','content','name'));        
-    }        
+    }  
+
+    public function hasManyThrough($id=1)
+    {
+        $title = 'Has Many Through Relationship';
+        $content = 'Saat ini sedang belajar relasi Has Many Through';
+        $kota = \App\Kota::find($id);
+
+        return view('has_many_through', compact('kota','title','content'));        
+    }            
 }
