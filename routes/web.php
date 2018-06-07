@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('home.index');
+    return view('welcome');
 });
 // Route::get('user/{id}', function ($id) {
 //     return $id;
